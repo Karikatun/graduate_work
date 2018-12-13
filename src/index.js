@@ -5,12 +5,13 @@ window.addEventListener('DOMContentLoaded', () => {
     let popUpGift = require('./parts/popUpGift'),
         topSlider = require('./parts/topSlider'),
         botSlider = require('./parts/botSlider'),
-        accordion = require('./parts/accordion');
+        accordion = require('./parts/accordion'),
+        popupConsult = require('./parts/popupConsult');
 
 
     popUpGift();
     topSlider();
     botSlider();
     accordion();
-
+    popupConsult();
 });

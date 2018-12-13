@@ -9,7 +9,7 @@ function popUpGift() {
     });
 
     popupGift.addEventListener('click', function(e) {
-        if (e.target && e.target.classList.contains('popup-close') || !e.target.classList.contains('popup-content')){
+        if (e.target && e.target.classList.contains('popup-close') || e.target.classList.contains('popup-gift')){
             close();
         }
 
