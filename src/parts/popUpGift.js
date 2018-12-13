@@ -15,7 +15,7 @@ function popUpGift() {
 
     });
 
-    function close(e) {
+    function close() {
             popupGift.style.display = 'none';
             document.body.style.overflow = '';
     }

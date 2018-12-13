@@ -1,6 +1,5 @@
 function popupConsult() {
-    let buttons = document.querySelectorAll('.button-consultation'),
-        popupConsult = document.querySelector('.popup-consultation');
+    let popupConsult = document.querySelector('.popup-consultation');
 
     window.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('button-consultation')) {
@@ -15,7 +14,7 @@ function popupConsult() {
 
     });
 
-    function close(e) {
+    function close() {
         popupConsult.style.display = 'none';
         document.body.style.overflow = '';
     }

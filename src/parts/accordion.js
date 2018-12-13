@@ -46,7 +46,6 @@ function accordion() {
             }
         });
     }
-    console.log(span);
 }
 
 module.exports = accordion;
