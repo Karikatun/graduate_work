@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
         botSlider = require('./parts/botSlider'),
         accordion = require('./parts/accordion'),
         popupConsult = require('./parts/popupConsult'),
-        popupDesign = require('./parts/popupDesign');
+        popupDesign = require('./parts/popupDesign'),
+        stylesBlock = require('./parts/stylesBlock'),
+        calc = require('./parts/calc');
 
 
     popUpGift();
@@ -16,4 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
     accordion();
     popupConsult();
     popupDesign();
+    stylesBlock();
+    calc();
 });
