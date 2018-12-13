@@ -36,8 +36,9 @@ function accordion() {
         accordionHeading[i].addEventListener('click', () => {
             if (accordionBlock[i].style.display === 'none'){
                 hideBlock();
-                span[i].style.color = 'pink';
-                span[i].style.borderBottom = 'none';                
+                span[i].style.color = '#C51ABB';
+                span[i].style.borderBottom = 'none';
+                accordionBlock[i].style.marginTop = '0px'              
                 showBlock(i);    
             } else {
                 span[i].style.color = 'black';
