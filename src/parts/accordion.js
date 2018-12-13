@@ -38,7 +38,8 @@ function accordion() {
                 hideBlock();
                 span[i].style.color = '#C51ABB';
                 span[i].style.borderBottom = 'none';
-                accordionBlock[i].style.marginTop = '0px'              
+                accordionBlock[i].style.marginTop = '0px';
+                accordionBlock[i].style.marginBottom = '20px';
                 showBlock(i);    
             } else {
                 span[i].style.color = 'black';
