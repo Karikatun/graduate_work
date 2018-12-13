@@ -24,7 +24,7 @@ function calc() {
         optionsVal = +this.options[this.selectedIndex].value;
         sum();
     });
-    promocode.addEventListener('change', function() {
+    promocode.addEventListener('input', function() {
         if (promocode.value === 'IWANTPOPART'){
             promocodeVal = 0.7;            
         } else {
