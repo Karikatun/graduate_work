@@ -1,12 +1,11 @@
 function modalForm() {
-    let modalForm = document.querySelector('.modal-main-form'),
-        popupForm = document.querySelectorAll('#popup-form'),
+    let popupForm = document.querySelectorAll('#popup-form, .modal-main-form'),
         commentText = document.querySelectorAll('.input-text'),
         name = document.querySelectorAll('input[type="name"]'),
         successMes = document.querySelectorAll('.success'),
         failureMes = document.querySelectorAll('.failure');
 
-    function sendForm(form) {
+    popupForm.forEach(function(form) {
         let message = {
             loading: 'Загрузка...',
             succsess: 'Спасибо! Скоро мы с вами свяжемся!',
@@ -14,8 +13,8 @@ function modalForm() {
         };
 
 
-        let input = form.getElementsByTagName('input'),
-            comment = form.getElementsByTagName('textarea'),
+        let input = form.querySelectorAll('input'),
+            comment = form.querySelectorAll('input-text'),
             statusMessage = document.createElement('div');
 
         form.addEventListener('submit', function (e) {
@@ -76,9 +75,7 @@ function modalForm() {
                 .then(clearInput);
 
         });
-    }
-    sendForm(modalForm);
-    sendForm(popupForm);
+    });
 
     commentText.forEach(function (item) {
         item.onkeyup = function () {

@@ -22,17 +22,10 @@ function popupConsult() {
     function close() {
         popupConsult.style.display = 'none';
         document.body.style.overflow = '';
-
-        function unblock(form) {
-            if (form.style.display = 'none') {
-                form.style.display = '';
-            }
-            successMes.forEach((item) => item.style.display = 'none');
-            failureMes.forEach((item) => item.style.display = 'none');
-        }
-        unblock(popupForm);
+        popupForm.style.display = 'block';
+        successMes.forEach((item) => item.style.display = 'none');
+        failureMes.forEach((item) => item.style.display = 'none');
     }
-
 }
 
 module.exports = popupConsult;

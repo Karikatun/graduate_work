@@ -22,9 +22,7 @@ function popupDesign() {
     function close() {
         popupDesign.style.display = 'none';
         document.body.style.overflow = '';
-        if (modalForm.style.display = 'none') {
-            modalForm.style.display = '';
-        }
+        modalForm.style.display = 'block';
         successMes.forEach((item) => item.style.display = 'none');
         failureMes.forEach((item) => item.style.display = 'none');
     }

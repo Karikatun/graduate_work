@@ -10,9 +10,9 @@ function mainForm() {
             failure: 'Что-то пошло не так...'
         };
 
-        let input = form.getElementsByTagName('input'),
-            comment = form.getElementsByTagName('textarea'),
-            statusMessage = document.createElement('div');
+        let input = form.querySelectorAll('input'),
+        comment = form.querySelectorAll('input-text'),
+        statusMessage = document.createElement('div');
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
