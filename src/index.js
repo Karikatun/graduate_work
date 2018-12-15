@@ -10,8 +10,10 @@ window.addEventListener('DOMContentLoaded', () => {
         popupDesign = require('./parts/popupDesign'),
         stylesBlock = require('./parts/stylesBlock'),
         calc = require('./parts/calc'),
-        mainForm = require('./parts/mainForm');
-
+        mainForm = require('./parts/mainForm'),
+        modalForm = require('./parts/modalForm'),
+        telValid = require('./parts/telValid'),
+        minuteDelayPopup = require('./parts/minuteModalWindow.js');
 
     popUpGift();
     topSlider();
@@ -22,4 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     stylesBlock();
     calc();
     mainForm();
+    modalForm();
+    telValid();
+    minuteDelayPopup();
 });
