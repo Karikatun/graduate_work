@@ -1,6 +1,6 @@
 function mainForm() {
-    let mainForm = document.querySelector('.some-form'),
-        modalForm = document.querySelector('.modal-form');
+    let mainForm = document.querySelector('.main-main-form'),
+        modalForm = document.querySelector('.modal-main-form');
 
     function sendForm(form) {
         let message = {
