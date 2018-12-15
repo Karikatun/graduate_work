@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
         popupConsult = require('./parts/popupConsult'),
         popupDesign = require('./parts/popupDesign'),
         stylesBlock = require('./parts/stylesBlock'),
-        calc = require('./parts/calc');
+        calc = require('./parts/calc'),
+        mainForm = require('./parts/mainForm');
 
 
     popUpGift();
@@ -20,4 +21,5 @@ window.addEventListener('DOMContentLoaded', () => {
     popupDesign();
     stylesBlock();
     calc();
+    mainForm();
 });
