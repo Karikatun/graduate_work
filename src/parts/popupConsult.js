@@ -1,6 +1,6 @@
 function popupConsult() {
     let popupConsult = document.querySelector('.popup-consultation'),
-        popupForm = document.querySelectorAll('#popup-form'),
+        popupForm = popupConsult.querySelector('#popup-form'),
         successMes = document.querySelectorAll('.success'),
         failureMes = document.querySelectorAll('.failure');
 
@@ -21,7 +21,6 @@ function popupConsult() {
 
     function close() {
         popupConsult.style.display = 'none';
-        document.body.style.overflow = '';
         popupForm.style.display = 'block';
         successMes.forEach((item) => item.style.display = 'none');
         failureMes.forEach((item) => item.style.display = 'none');
