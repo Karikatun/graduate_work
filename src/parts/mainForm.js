@@ -1,6 +1,7 @@
 function mainForm() {
     let mainForm = document.querySelector('.main-main-form'),
-        modalForm = document.querySelector('.modal-main-form');
+        commentText = document.querySelectorAll('.input-text'),
+        name = document.querySelectorAll('input[type="name"]');
 
     function sendForm(form) {
         let message = {
@@ -64,25 +65,34 @@ function mainForm() {
 
         });
     }
-    sendForm(mainForm);
-    sendForm(modalForm);
+    sendForm(mainForm);    
 
-
-
-let validate = (input, regex) => {
-    let value = input.value;
-    input.addEventListener('input', function (e) {
-        let newValue = e.target.value;
-        if (newValue.match(regex)) {
-            input.value = value;
-            return;
-        }
-        value = newValue;
+    commentText.forEach(function (item) {
+        item.onkeyup = function () {
+            return this.value = this.value.replace(/[^а-я,.? ]/gim, '');
+        };
     });
-};
 
-let telInput = document.querySelectorAll('input[type="tel"]');
-telInput.forEach(function (input) {
+    name.forEach(function (item) {
+        item.onkeyup = function () {
+            return this.value = this.value.replace(/[^а-я-]/gim, '');
+        };
+    });
+
+    let validate = (input, regex) => {
+        let value = input.value;
+        input.addEventListener('input', function (e) {
+            let newValue = e.target.value;
+            if (newValue.match(regex)) {
+                input.value = value;
+                return;
+            }
+            value = newValue;
+        });
+    };
+
+    let telInput = document.querySelectorAll('input[type="tel"]');
+    telInput.forEach(function (input) {
         let len = 0;
 
         validate(input, /[^+()\d-]/);
@@ -113,8 +123,6 @@ telInput.forEach(function (input) {
             len++;
         });
     });
-
-    
 }
 
 
