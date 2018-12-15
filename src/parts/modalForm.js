@@ -1,7 +1,10 @@
-function mainForm() {
-    let mainForm = document.querySelector('.main-main-form'),
+function modalForm() {
+    let modalForm = document.querySelector('.modal-main-form'),
+        popupForm = document.querySelectorAll('#popup-form'),
         commentText = document.querySelectorAll('.input-text'),
-        name = document.querySelectorAll('input[type="name"]');
+        name = document.querySelectorAll('input[type="name"]'),
+        successMes = document.querySelectorAll('.success'),
+        failureMes = document.querySelectorAll('.failure');
 
     function sendForm(form) {
         let message = {
@@ -9,6 +12,7 @@ function mainForm() {
             succsess: 'Спасибо! Скоро мы с вами свяжемся!',
             failure: 'Что-то пошло не так...'
         };
+
 
         let input = form.getElementsByTagName('input'),
             comment = form.getElementsByTagName('textarea'),
@@ -59,13 +63,22 @@ function mainForm() {
 
             postData(json)
                 .then(() => statusMessage.innerHTML = message.loading)
-                .then(() => statusMessage.innerHTML = message.succsess)
-                .catch(() => statusMessage.innerHTML = message.failure)
+                .then(() => {
+                    form.style.display = 'none';
+                    successMes.forEach((item) => item.style.display = 'block');
+                    statusMessage.innerHTML = '';
+                })
+                .catch(() => {
+                    form.style.display = 'none';
+                    failureMes.forEach((item) => item.style.display = 'block');
+                    statusMessage.innerHTML = '';
+                })
                 .then(clearInput);
 
         });
     }
-    sendForm(mainForm);
+    sendForm(modalForm);
+    sendForm(popupForm);
 
     commentText.forEach(function (item) {
         item.onkeyup = function () {
@@ -79,8 +92,6 @@ function mainForm() {
         };
     });
 
-    
 }
 
-
-module.exports = mainForm;
+module.exports = modalForm;

@@ -1,5 +1,10 @@
 function popupDesign() {
-    let popupDesign = document.querySelector('.popup-design');
+    let popupDesign = document.querySelector('.popup-design'),
+        modalForm = document.querySelector('.modal-main-form'),
+        successMes = document.querySelectorAll('.success'),
+        failureMes = document.querySelectorAll('.failure');
+
+
 
     window.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('button-design')) {
@@ -17,6 +22,11 @@ function popupDesign() {
     function close() {
         popupDesign.style.display = 'none';
         document.body.style.overflow = '';
+        if (modalForm.style.display = 'none') {
+            modalForm.style.display = '';
+        }
+        successMes.forEach((item) => item.style.display = 'none');
+        failureMes.forEach((item) => item.style.display = 'none');
     }
 }
 

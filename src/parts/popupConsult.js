@@ -1,5 +1,10 @@
 function popupConsult() {
-    let popupConsult = document.querySelector('.popup-consultation');
+    let popupConsult = document.querySelector('.popup-consultation'),
+        popupForm = document.querySelectorAll('#popup-form'),
+        successMes = document.querySelectorAll('.success'),
+        failureMes = document.querySelectorAll('.failure');
+
+
 
     window.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('button-consultation')) {
@@ -17,6 +22,15 @@ function popupConsult() {
     function close() {
         popupConsult.style.display = 'none';
         document.body.style.overflow = '';
+
+        function unblock(form) {
+            if (form.style.display = 'none') {
+                form.style.display = '';
+            }
+            successMes.forEach((item) => item.style.display = 'none');
+            failureMes.forEach((item) => item.style.display = 'none');
+        }
+        unblock(popupForm);
     }
 
 }
