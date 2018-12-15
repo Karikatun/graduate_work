@@ -65,7 +65,7 @@ function mainForm() {
 
         });
     }
-    sendForm(mainForm);    
+    sendForm(mainForm);
 
     commentText.forEach(function (item) {
         item.onkeyup = function () {
@@ -93,7 +93,6 @@ function mainForm() {
 
     let telInput = document.querySelectorAll('input[type="tel"]');
     telInput.forEach(function (input) {
-        let len = 0;
 
         validate(input, /[^+()\d-]/);
 
@@ -107,20 +106,11 @@ function mainForm() {
             }
         });
 
-        input.addEventListener('keydown', () => {
+        input.addEventListener('keydown', (e) => {
             let curLen = input.value.length;
 
-            if (curLen < len) {
-                len--;
-                return;
-            }
-
-            if (curLen == 2) input.value = input.value + "(";
-            if (curLen == 6) input.value = input.value + ")-";
-            if (curLen == 11) input.value = input.value + "-";
-            if (curLen == 14) input.value = input.value + "-";
-            if (curLen > 16) input.value = input.value.substring(0, input.value.length - 1);
-            len++;
+            if (input.value.length < 2 && e.keyCode == 8) e.preventDefault();
+            if (curLen == 0) input.value = "+";
         });
     });
 }
