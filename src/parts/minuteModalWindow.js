@@ -9,7 +9,7 @@ function minuteModalWindow() {
         } else {
             popupConsult.style.display = 'block';
         }
-    }, 5000);
+    }, 60000);
 
 }
 
