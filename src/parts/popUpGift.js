@@ -6,6 +6,7 @@ function popUpGift() {
     fixedGift.addEventListener('click', function () {
         fixedGift.style.display = 'none';
         popupGift.style.display = 'block';
+        document.body.style.overflow = 'hidden';
     });
 
     popupGift.addEventListener('click', function(e) {

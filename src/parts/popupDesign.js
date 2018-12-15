@@ -9,6 +9,7 @@ function popupDesign() {
     window.addEventListener('click', (e) => {
         if (e.target && e.target.classList.contains('button-design')) {
             popupDesign.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         }
     });
 
@@ -24,6 +25,7 @@ function popupDesign() {
         modalForm.style.display = 'block';
         successMes.forEach((item) => item.style.display = 'none');
         failureMes.forEach((item) => item.style.display = 'none');
+        document.body.style.overflow = '';
     }
 }
 
