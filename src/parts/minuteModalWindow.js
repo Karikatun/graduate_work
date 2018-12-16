@@ -8,6 +8,8 @@ function minuteModalWindow() {
             clearTimeout(timerId);
         } else {
             popupConsult.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
         }
     }, 60000);
 

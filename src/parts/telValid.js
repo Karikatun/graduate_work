@@ -16,8 +16,7 @@ function telValid(){
     telInput.forEach(function (input) {
 
         
-
-        validate(input, /[^+\d]/);
+        validate(input, /[^(+){1}\d{11}]/);
 
         input.addEventListener('click', () => {
             if (input.value.length < 3) {
