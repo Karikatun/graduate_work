@@ -14,7 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
         modalForm = require('./parts/modalForm'),
         telValid = require('./parts/telValid'),
         minuteDelayPopup = require('./parts/minuteModalWindow.js'),
-        endModal = require('./parts/endModalWindow.js');
+        endModal = require('./parts/endModalWindow.js'),
+        blockFilter = require('./parts/blockFilter');
 
     popUpGift();
     topSlider();
@@ -29,4 +30,5 @@ window.addEventListener('DOMContentLoaded', () => {
     telValid();
     minuteDelayPopup();
     endModal();
+    blockFilter();
 });
