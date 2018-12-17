@@ -15,8 +15,7 @@ function telValid(){
     let telInput = document.querySelectorAll('input[type="tel"]');
     telInput.forEach(function (input) {
 
-        
-        validate(input, /[^(+){1}\d{11}]/);
+        validate(input, /[^+\d]/);
 
         input.addEventListener('click', () => {
             if (input.value.length < 3) {
@@ -35,6 +34,9 @@ function telValid(){
 
             if (input.value.length < 2 && e.keyCode == 8) e.preventDefault();
             if (curLen == 0) input.value = "+";
+            for (let i = 1; i < curLen; i++){
+                if (input.value[i] === '+') input.value = '+';
+            }
         });
     });
 }
