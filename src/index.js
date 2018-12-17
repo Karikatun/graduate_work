@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
         minuteDelayPopup = require('./parts/minuteModalWindow.js'),
         endModal = require('./parts/endModalWindow.js'),
         blockFilter = require('./parts/blockFilter'),
-        sizesWrapper = require('./parts/sizesWrapper');
+        sizesWrapper = require('./parts/sizesWrapper'),
+        burgerMenu = require('./parts/burgerMenu');
 
     popUpGift();
     topSlider();
@@ -33,4 +34,5 @@ window.addEventListener('DOMContentLoaded', () => {
     endModal();
     blockFilter();
     sizesWrapper();
+    burgerMenu();
 });
