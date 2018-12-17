@@ -6,7 +6,7 @@ function endModal() {
 
 
     window.addEventListener('scroll', function() {
-        if(document.documentElement.scrollTop >= 11500 && fixedGift.style.display != 'none' && popupForm.style.display != 'block' && modalForm.style.display != 'block'){
+        if(document.documentElement.scrollTop > 11000 && fixedGift.style.display != 'none' && popupForm.style.display != 'block' && modalForm.style.display != 'block'){
             fixedGift.style.display = 'none';
             popupGift.style.display = 'block';
             document.body.style.overflow = 'hidden';
