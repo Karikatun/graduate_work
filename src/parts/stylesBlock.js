@@ -8,13 +8,15 @@ function stylesBlock() {
                 let img = stylesBlock[i].querySelector('img'),
                     block = stylesBlock[i].querySelector('.styles-block');                
                 stylesBlock[i].setAttribute('style', 'display:inline-block !important');
-                stylesBlock[i].style.width = '292.5px';
+                stylesBlock[i].style.width = '289.5px';
                 stylesBlock[i].style.height = '373px';
                 stylesBlock[i].style.paddingLeft = '15px';
                 stylesBlock[i].style.paddingRight = '15px';
-                block.style.position = 'relative';
+                block.style.width = '262.5px';
+                block.style.height = '343px';
+                block.style.marginRight = '0px';
                 img.style.display = 'block';
-                img.style.height = '214.0px';
+                img.style.height = '214px';
                 img.style.width = '153px';
             }
             buttonStyles.style.display = 'none';
