@@ -9,11 +9,12 @@ function stylesBlock() {
                     block = stylesBlock[i].querySelector('.styles-block');                
                 stylesBlock[i].setAttribute('style', 'display:inline-block !important');
                 stylesBlock[i].style.width = '292.5px';
-                stylesBlock[i].style.heght = '373px';
+                stylesBlock[i].style.height = '373px';
                 stylesBlock[i].style.paddingLeft = '15px';
                 stylesBlock[i].style.paddingRight = '15px';
                 block.style.position = 'relative';
-                img.style.heght = '214.0px';
+                img.style.display = 'block';
+                img.style.height = '214.0px';
                 img.style.width = '153px';
             }
             buttonStyles.style.display = 'none';
